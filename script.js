@@ -1,3 +1,29 @@
+const btn1 = document.querySelector("#btn1");
+
+const btn2 = document.querySelector("#btn2");
+
+const video = document.querySelector("video");
+console.log(video);
+
+/* btn1.addEventListener("click", () => {
+  Puck.write("LED1.set();\n");
+});
+btn2.addEventListener("click", () => {
+  Puck.write("LED1.reset();\n");
+}); */
+// Play 3 secs of video
+document.body.onkeyup = function (e) {
+  if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
+    //your code
+    video.play(); // play the video
+    setTimeout(function () {
+      video.pause();
+    }, 1000);
+  }
+};
+
+/* 
+NFC
 import { Espruino } from "https://unpkg.com/ixfx/dist/io.js";
 
 const btn1 = document.querySelector("#btn1");
@@ -25,7 +51,15 @@ ndef
   })
   .catch((error) => {
     console.log(`Error! Scan failed to start: ${error}.`);
-  });
+  }); */
+
+/*
+  React to BTN
+setWatch(()=>{
+  analogWrite(LED1, Math.random());
+  analogWrite(LED2, Math.random());
+  analogWrite(LED3, Math.random());
+}, BTN, {edge: "rising", debounce: 50, repeat:true}); */
 
 //https://www.espruino.com/Web+NFC
 
